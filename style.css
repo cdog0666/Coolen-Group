@@ -1,0 +1,405 @@
+/* ===========================
+   COOLEN GROUP
+   Main Stylesheet
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    color:#0f172a;
+    background:#f8fafc;
+    line-height:1.7;
+}
+
+/* ---------------- NAV ---------------- */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid #e2e8f0;
+
+    z-index:999;
+    transition:.3s;
+}
+
+nav.scrolled{
+    height:68px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.logo{
+
+    font-size:1.35rem;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo a{
+
+    color:#0f172a;
+    text-decoration:none;
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+
+    color:#334155;
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.25s;
+}
+
+nav ul li a:hover{
+
+    color:#2563eb;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 8%;
+}
+
+.hero-content{
+
+    max-width:850px;
+}
+
+.hero h1{
+
+    font-size:4rem;
+    font-weight:800;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+}
+
+.hero p{
+
+    font-size:1.2rem;
+
+    color:#475569;
+
+    margin-bottom:45px;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    background:#2563eb;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+section{
+
+    padding:110px 8%;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title h2{
+
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+.section-title p{
+
+    color:#64748b;
+}
+
+/* ---------------- GRID ---------------- */
+
+.grid{
+
+    display:grid;
+    gap:30px;
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+}
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* ---------------- CARD ---------------- */
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 12px 30px rgba(15,23,42,.05);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(15,23,42,.10);
+}
+
+.card h3{
+
+    margin-bottom:18px;
+
+    font-size:1.4rem;
+}
+
+.card p{
+
+    color:#64748b;
+}
+
+/* ---------------- HOLDINGS ---------------- */
+
+.holding-card{
+
+    text-align:center;
+}
+
+.holding-card h3{
+
+    margin-top:15px;
+}
+
+/* ---------------- TIMELINE ---------------- */
+
+.timeline{
+
+    max-width:800px;
+    margin:auto;
+}
+
+.timeline-item{
+
+    border-left:4px solid #2563eb;
+
+    padding:20px 30px;
+
+    margin-bottom:25px;
+
+    background:white;
+
+    border-radius:0 12px 12px 0;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.timeline-year{
+
+    color:#2563eb;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+}
+
+/* ---------------- FEATURE LIST ---------------- */
+
+.feature{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+    align-items:flex-start;
+}
+
+.feature span{
+
+    color:#2563eb;
+
+    font-size:22px;
+}
+
+/* ---------------- PRICING ---------------- */
+
+.price{
+
+    font-size:2.5rem;
+
+    color:#2563eb;
+
+    margin:20px 0;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+footer p{
+
+    color:#cbd5e1;
+}
+
+/* ---------------- FADE IN ---------------- */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s;
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:950px){
+
+.grid-3{
+
+grid-template-columns:1fr;
+}
+
+.grid-2{
+
+grid-template-columns:1fr;
+}
+
+.hero h1{
+
+font-size:2.8rem;
+}
+
+nav{
+
+padding:0 5%;
+}
+
+nav ul{
+
+gap:18px;
+}
+
+}
+
+@media(max-width:650px){
+
+.hero h1{
+
+font-size:2.2rem;
+}
+
+nav{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+}
+
+nav ul{
+
+margin-top:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+}
+
+section{
+
+padding:80px 7%;
+}
+
+}
